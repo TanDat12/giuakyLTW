@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang Đấu Giá</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Trang Đấu Giá Sản Phẩm</h1>
+        <div id="auth-section">
+            <button class="button" onclick="showLoginForm()" id="login-button">Đăng nhập</button>
+            <button class="button" onclick="logout()" id="logout-button" style="display:none">Đăng xuất</button>
+            <button class="button" onclick="toggleCart()" id="cart-button">Giỏ hàng</button>
+        </div>
+    </header>
+    <div class="container">
+        <h2>Danh Sách Sản Phẩm</h2>
+        <div id="product-list" class="product-grid">
+            <!-- Danh sách sản phẩm sẽ được hiển thị tại đây -->
+        </div>
+    </div>
+
+    <div id="login-form">
+        <h3>Đăng Nhập</h3>
+        <input type="text" id="username" placeholder="Tên đăng nhập">
+        <input type="password" id="password" placeholder="Mật khẩu">
+        <button onclick="login()">Đăng nhập</button>
+    </div>
+
+    <div id="cart">
+        <h3>Giỏ Hàng</h3>
+        <div id="cart-items">
+            <!-- Các sản phẩm trong giỏ hàng sẽ được hiển thị tại đây -->
+        </div>
+        <p class="cart-total">Tổng: <span id="cart-total">0</span> VND</p>
+    </div>
+
+    <script src="data.js"></script>
+    <script src="functions.js"></script>
+    <script src="render.js"></script>
+</body>
+</html>
